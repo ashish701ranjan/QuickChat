@@ -1,0 +1,11 @@
+<form align="center" (ngSubmit)="onSubmit(heroForm)" #heroForm="ngForm">
+  <div class="form-group">
+    <label for='username'>
+      <input class="form-control" ngModel name="username" type='text' placeholder="username" required>
+    </label>
+    <label for='password'>
+      <input class="form-control" ngModel name="password" type='password' placeholder="password">
+    </label>
+  </div>
+  <button type="submit" [disabled]="!heroForm.form.valid"> Submit </button>
+</form>
